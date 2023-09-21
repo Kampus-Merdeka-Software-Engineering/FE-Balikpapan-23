@@ -1,0 +1,634 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --main: #860EFF;
+    --main2: #1C0C5B;
+    --bg: #D9D9D9;
+    --shadow: 3px 3px 10px rgb(45, 43, 43);
+}
+
+/* Style untuk navbar */
+/* Style untuk navbar */
+.container-navbar {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    background-color: #1C0C5B;
+    display: flex
+}
+
+.logo>img {
+    height: 40px;
+    width: 10rem;
+}
+.search{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: .3rem;
+    border-radius: 10px;
+    width: 15rem;
+    color: black;
+}
+.search-bar{
+    border: none;
+    margin-left: .5rem;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu-nav>a {
+    color: #D9D9D9;
+    text-decoration: none;
+    margin: 0 1.3rem;
+    font-size: 20px;
+}
+
+.menu>input {
+    margin-right: 1rem;
+}
+
+.login>a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.login-button {
+    background-color: var(--main);
+    padding: .5rem 2rem;
+}
+
+
+.content2 {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/FRONTEND/images/courier-attaching-label.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+section {
+    max-height: 100vh;
+    padding: 4rem 5rem;
+}
+
+section>h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main2);
+    margin-bottom: 1rem;
+}
+
+section>p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* tracking */
+.container-tracking {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.5rem;
+    box-shadow: 3px 3px 10px rgb(45, 43, 43);
+}
+
+.container-card-input {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    font-size: .8rem;
+}
+
+.lokasi {
+    width: 12rem;
+}
+
+.tujuan {
+    width: 12rem;
+}
+
+.berat {
+    width: 7.9rem;
+}
+
+.card>p,
+.card-input>p,
+.card>h1,
+.card-input>h1 {
+    margin-top: .5rem;
+    color: var(--main2);
+}
+
+.card>input,
+.card-input>input {
+    width: 100%;
+    padding: .3rem;
+    margin-top: .4rem;
+}
+
+.button {
+    margin-top: .5rem;
+    padding: .5rem;
+    background-color: var(--main);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.container-whyus {
+    width: 100%;
+    display: flex;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
+    padding: 4rem 2rem;
+
+}
+
+.quote {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -2rem;
+    left: 4rem;
+    z-index: 2;
+    background-color: var(--main2);
+    text-align: center;
+    line-height: 1px;
+    font-size: 7rem;
+    color: var(--main);
+    transform: rotate(180deg);
+}
+.img-testi{
+    font-size: 5rem;
+}
+.container-testi {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testi {
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+
+.kata-kata {
+    margin-left: .5rem;
+}
+
+
+
+/* kontent kanan */
+
+.container-content-kanan {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.content-kanan {
+    width: 60%;
+}
+
+.content-kanan img {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.content-kanan h4 {
+    margin-top: 1rem;
+}
+
+
+
+.container-content3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1.3rem;
+    background-color: var(--main);
+    width: 100%;
+    margin-top: 2rem
+}
+
+.container-caption {
+    width: 10rem;
+}
+
+.caption {
+    text-align: center;
+    color: white;
+}
+
+.caption>i {
+   font-size: 3rem;
+}
+.caption>img{
+ width: 4rem;
+ height: 4rem;
+}
+
+/* infoemasi terbaru */
+.informasi-terbaru{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info-img {
+    width: 30%;
+}
+
+.info-img img {
+    width: 100%;
+    height: 10rem;
+}
+
+footer {
+    background-color: var(--main2);
+    padding: 4rem 5rem;
+}
+
+.logo-footer img {
+    width: 15rem;
+    height: 5rem;
+}
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-kanan {
+ gap: 4rem;
+}
+.footer-bottom, .sosmed{
+    padding: .5rem;
+}
+
+
+
+
+@media (max-width: 576px) {
+
+    section {
+        max-height: 100vh;
+        padding: 2rem 2rem;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex;
+        display: none;
+    }
+
+    .container-tracking {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: .9rem;
+    }
+
+    .container-whyus {
+        flex-direction: column;
+    }
+
+    .container-testi {
+        width: 100%;
+        margin-bottom: .5rem;
+        flex-direction: row;
+    }
+
+    .testi {
+        flex-direction: column;
+    }
+
+    .img-testi {
+        width: 3rem;
+        width: 100%;
+    }
+    .container-info{
+        font-size: .7rem;
+    }
+    .container-footer{
+        display: flex;
+    }
+
+    .logo-footer img{
+        width: 14rem;
+        height: 4rem;
+    }
+    .footer-kanan{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 789px){
+    section {
+        max-height: 100vh;
+        padding: 2rem 2rem;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    .menu-nav{
+        display: none;
+    }
+    .container-tracking {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: .9rem;
+    }
+
+    .container-whyus {
+        flex-direction: column;
+    }
+
+    .container-testi {
+        width: 100%;
+        margin-bottom: .5rem;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .testi {
+        flex-direction: column;
+    }
+    .container-content-kanan{
+        font-size: .7rem;
+    }
+    footer{
+        font-size: .9rem;
+    }
+    .logo-footer img{
+        width: 14rem;
+        height: 4rem;
+    }
+    .footer-kanan{
+        flex-direction: column;
+    }
+}
+
+
+.footer-kanan{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 18px;
+}
+
+.container-footer-bottom{
+    color: white;
+    background-color: var(--main2);
+    display: flex;
+    padding: 0 5rem;
+    justify-content: space-between;
+    border-top: .1rem solid white;
+}
+.sosmed{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile-container {
+    padding: 0;
+    margin:20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.profile-desc {
+    padding: 2px 16px;
+}
+
+/* style news */
+
+.content-hero{
+    display: flex;
+}
+.judul-hero-news{
+    position: absolute;
+    top: 7rem;
+    left: 4rem;
+    z-index: 2;
+    width: 40%;
+}
+.bg-hero{
+    width: 100%;
+}
+.bg-hero img{
+    position: relative;
+    width: 100%;
+    height: 25rem;
+}
+
+.container-search-news{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.search-bar-news{
+    display: flex;
+    align-items:center ;
+    background-color:white;
+    padding: .5rem;
+    width: 70%;
+    border-radius: .4rem;
+    box-shadow: var(--shadow);
+    color: #C4C4C4;
+}
+.search-bar-news>i{
+    font-size: 1.5rem;
+}
+.search-bar-news>input{
+    border: none;
+    background-color: transparent;
+    margin-left: 2rem;
+}
+.search-bar-news>button{
+    background-color: var(--main);
+    color: white;
+    padding: .5rem 2rem;
+    margin-left: 37rem;
+}
+
+/* content news */
+.container-content-news{
+    color: white;
+    display: flex;
+    width: 100%;
+    background-color: #860EFF;
+}
+.judul-left-news{
+    padding: 1rem 3rem;
+}
+.content-left-news{
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+}
+.caption-img-news{
+    margin-left: 1rem;
+}
+.caption-img-news>h3{
+    margin: .4rem 0;
+}
+.container-img-left-news{
+    width: 100%;
+}
+.img-news> img{
+    width: 10rem;
+}
+.content-right-news>img{
+    width: 30rem;
+    height: 100%;
+}
+/* content news end */
+
+/* artikel */
+.artikel{
+    padding: 1rem 5rem;
+}
+.container-artikel{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+.artikel-img{
+    display: flex;
+    flex-direction: column;
+}
+.artikel-img>img{
+    width: 100%;
+    height: 15rem;
+}
+.artikel-img>p{
+    margin: 1rem 0;
+}
+.person-artikel{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.person-artikel>img{
+    border-radius: 50%;
+    width: 3rem;
+}
+.arrow>button{
+    cursor: pointer;
+    border: none;
+    width: 8rem;
+    font-size: 1.7rem;
+    background-color: var(--main);
+}
+/* artikel end */
+/* style news end */
+
+
+/* berita 2 */
+.berita2{
+    padding: 1rem 5rem;
+}
+.hero-berita2 img{
+    width: 100%;
+    height: 30rem;
+}
+.container-info-berita2{
+    display: flex;
+    justify-content: space-between;
+}
+.capt>h1{
+    text-align: start;
+    color: black;
+}
+.capt>p{
+    text-align: start;
+}
+.tag>span{
+    background-color: var(--main);
+}
+/* berita 2 end */
