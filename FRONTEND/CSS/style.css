@@ -639,13 +639,14 @@ footer {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 50px;
     margin: 20px;
 }
 
 .member-profile {
     box-sizing: border-box;
     justify-content: space-evenly;
+    margin: 20px;
 }
 
 .member-profile>img {
