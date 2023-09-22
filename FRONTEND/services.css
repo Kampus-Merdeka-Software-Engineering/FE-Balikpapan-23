@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+:root {
+    --main: #860EFF;
+    --main2: #1C0C5B;
+    --bg: #D9D9D9;
+    --shadow: 3px 3px 10px rgb(45, 43, 43);
+}
+/* Style untuk navbar */
+.container-navbar {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    background-color: #1C0C5B;
+    display: flex
+}
+
+.logo>img {
+    height: 60px;
+    width: auto;
+}
+
+.search-bar {
+    padding: .3rem;
+    border-radius: 10px;
+    width: 240px;
+}
+
+.menu>a {
+    color: #D9D9D9;
+    text-decoration: none;
+    margin: 0 1.3rem;
+    font-size: 16px;
+}
+
+.menu>input {
+    margin-right: 1rem;
+}
+
+.login>a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.login-button {
+    background-color: var(--main);
+    padding: .5rem 2rem;
+}
+
+
+.content2 {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(ServicesIMG/courier-attaching-label.png);
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+/* layanan heading */
+section {
+    max-height: 100vh;
+    padding: 30px;
+}
+
+section>h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main2);
+    margin-bottom: 50px;
+}
+section>p {
+    text-align: center;
+    margin: 50px;
+}
+
+/* Jenis layanan */
+main{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+    /*background: #f2f2f2;*/
+
+}
+.wrapper{
+    display: grid;
+    margin: 100px 90px auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 700px) {
+    .wrapper{
+        margin: 200px auto;
+    }
+}
+.wrapper .box{
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+}
+.wrapper .box .front-face{
+    background: #fff;
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+}
+.box .front-face .icon{
+    height: 80px;
+}
+.box .front-face .icon i{
+    font-size: 65px;
+}
+.box .front-face span,
+.box .back-face span{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.box .front-face .icon i, 
+.box .front-face span{
+    background: linear-gradient(-135deg, #860EFF, #1C0C5B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.box .back-face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 220px;
+    width: 100%;
+    padding: 30px;
+    color: #fff;
+    opacity: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background: linear-gradient(-135deg, #860EFF, #860EFF);
+    transform: translateY(110px) rotateX(-90deg);
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+}
+.box .back-face p{
+    margin-top: 10px;
+    text-align: justify;
+}
+.box:hover .back-face{
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+.box:hover .front-face{
+    opacity: 0;
+    transform: translateY(-110px) rotateX(90deg);
+}
+h2{
+    font-size: 18px;
+    padding: 15px;
+    color: #1C0C5B;
+}
+
+footer {
+    background-color: var(--main2);
+    padding: 4rem 5rem;
+}
+
+.logo-footer img {
+    width: 15rem;
+    height: 5rem;
+}
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .footer-kanan > h1 {
+    color: white;
+    font-size: 24px;
+} */
+
+.footer-kanan{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 18px;
+}
+
+.container-footer-bottom{
+    color: white;
+    background-color: var(--main2);
+    display: flex;
+    padding: 0 5rem;
+    justify-content: space-between;
+}
+.sosmed{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile-container {
+    padding: 0;
+    margin:20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.profile-desc {
+    padding: 2px 16px;
+}
+
