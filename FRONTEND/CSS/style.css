@@ -638,18 +638,23 @@ footer {
 .container-team {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
 }
 
 .member-profile {
     box-sizing: border-box;
+    justify-content: space-evenly;
 }
 
 .member-profile>img {
-    width: 25%;
+    margin: 20px;
+    width: 300px;
+    height:auto;
 
 }
+/* our team end */
 
 /* services */
 .services-title {
@@ -763,3 +768,5 @@ footer {
     padding: 15px;
     color: #1C0C5B;
 }
+
+/* services end */
