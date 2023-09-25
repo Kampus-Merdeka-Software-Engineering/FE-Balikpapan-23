@@ -83,7 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/FRONTEND/images/courier-attaching-label.png');
+    background-image: url('/images/courier-attaching-label.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -779,7 +779,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/FRONTEND/images/fast-delivery-truck.jpgg");
+    background-image: url("/images/fast-delivery-truck.jpg");
     background-size: cover;
     background-position: center;
     color: white;
