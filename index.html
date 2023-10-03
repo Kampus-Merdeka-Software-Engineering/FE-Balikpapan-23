@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <title>Swift Express</title>
+</head>
+
+<body>
+    <div class="container-navbar">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/swift-express.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="menu">
+                <div class="search">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="search" placeholder="search...." class="search-bar">
+                </div>
+                <div class="menu-nav">
+                    <a href="services.html">Services</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="news.html">News</a>
+                    <a href="our-team.html">Our Team</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="login">
+                <a href="login.html" class="login-button">Login</a>
+                <a href="EN">EN</a>
+                <a href="#" id="hamberger"><i class="bi bi-list"></i></a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content2">
+        <div class="hero">
+            <h1>BANNER PROMO</h1>
+        </div>
+    </div>
+
+    <section class="tracking-section">
+        <div class="container-tracking">
+            <div class="card">
+                <h2>Track your package</h2>
+                <p>kode pengiriman</p>
+                <input type="text" id="lacak" placeholder="xxxxx-xxxx-xxx">
+                <button type="submit" class="open-button-lacak">LACAK</button>
+                <div class="modal">
+                    <dialog class="modal-lacak" id="modal-lacak"> 
+                        <h1>Hasil Pencarian</h1>
+                        <div>
+                            <table class="table-lacak">
+                                <thead>
+                                  <tr>
+                                    <th>No Resi</th>
+                                    <th>Asal</th>
+                                    <th>Tujuan</th>
+                                    <th>Pengirim</th>
+                                    <th>Penerima</th>
+                                    <th>Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1002351455</td>
+                                    <td>Surabaya</td>
+                                    <td>Jakarta</td>
+                                    <td>Rachel</td>
+                                    <td>Bima Putra</td>
+                                    <td>On Process</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <button class="close-button-lacak">Kembali</button>
+                    </dialog>
+                    </div>
+            </div>
+            <div class="card">
+                <h2>Check</h2>
+                <div class="container-card-input">
+                    <div class="card-input">
+                        <p>lokasi Awal</p>
+
+                        <div class="select-menu">
+                            <div class="select-button">
+                                <span class="button-text">Pilih Lokasi Awal</span>
+                                <i class="bi bi-chevron-compact-down"></i>
+                            </div>
+
+                            <ul class="opsi">
+                                <li class="provinsi">
+                                    <span class="text-provinsi">Makassar</span>
+                                </li>
+                                <li class="provinsi">
+                                    <span class="text-provinsi">Surabaya</span>
+                                </li>
+                                <li class="provinsi">
+                                    <span class="text-provinsi">Bandung</span>
+                                </li>
+                                <li class="provinsi">
+                                    <span class="text-provinsi">Jakarta</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="card-input">
+                        <p>Tujuan</p>
+                        <div class="select-menu-tujuan">
+                            <div class="select-button-tujuan">
+                                <span class="button-text-tujuan">Pilih Lokasi Awal</span>
+                                <i class="bi bi-chevron-compact-down"></i>
+                            </div>
+
+                            <ul class="opsi-tujuan">
+                                <li class="provinsi-tujuan">
+                                    <span class="text-provinsi-tujuan">Makassar</span>
+                                </li>
+                                <li class="provinsi-tujuan">
+                                    <span class="text-provinsi-tujuan">Surabaya</span>
+                                </li>
+                                <li class="provinsi-tujuan">
+                                    <span class="text-provinsi-tujuan">Bandung</span>
+                                </li>
+                                <li class="provinsi-tujuan">
+                                    <span class="text-provinsi-tujuan">Jakarta</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="card-input">
+                        <p>Berat (KG)</p>
+                        <input type="text" id="berat" placeholder="Kg">
+                    </div>
+                </div>
+                <button onclick="showPopup()" class="button-submit">Cek</button>
+
+
+                <!-- Tambahkan elemen div dengan ID sesuai -->
+
+
+
+                <div class="popup" id="myPopup">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <h1>CEK</h1>
+                        <div id="hasil-pengiriman">
+                            <div id="hasil-pengiriman">
+                                <table width=100%>
+                                    <tr>
+                                        <th>LOKASI AWAL</th>
+                                        <th>LOKASI TUJUAN</th>
+                                        <th>BERAT</th>
+                                        <th>LAYANAN</th>
+                                        <th>HARGA</th>
+                                    </tr>
+                                    <tr>
+                            </div>
+
+                            <td><span id="lokasi-awal"></span> </td>
+                            <td> <span id="lokasi-tujuan"></span></td>
+                            <td><span id="berat-hasil"></span></td>
+                            <td> <span id="layanan"></span></td>
+                            <td><span id="harga"></span></td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <!-- why us -->
+    <section class="whyUs">
+        <h1><b>WHY US</b></h1>
+        <div class="container-whyus">
+            <div class="quote">,,</div>
+
+            <div class="container-testi">
+
+                <div class="testi">
+                    <div class="img-testi">
+                        <i class="bi bi-emoji-smile"></i>
+                    </div>
+                    <div class="kata-kata">
+                        <h4>Pelanggan</h4>
+                        <p>0000000000</p>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <div class="img-testi">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <div class="kata-kata">
+                        <h4>Pelanggan</h4>
+                        <p>0000000000</p>
+                    </div>
+                </div>
+
+                <div class="testi">
+                    <div class="img-testi">
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <div class="kata-kata">
+                        <h4>Pelanggan</h4>
+                        <p>0000000000</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-content-kanan">
+                <div class="content-kanan">
+                    <img src="images/testimonial 1.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt veniam excepturi, porro
+                        praesentium corporis ducimus accusamus hic nostrum architecto!</p>
+                    <h4>personal</h4>
+                    <p>place name</p>
+                </div>
+                <div class="content-kanan">
+                    <img src="images/testimonial 2.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt veniam excepturi, porro
+                        praesentium corporis ducimus accusamus hic nostrum architecto!</p>
+                    <h4>personal</h4>
+                    <p>place name</p>
+                </div>
+                <div class="content-kanan">
+                    <img src="images/tetsimonial 3.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt veniam excepturi, porro
+                        praesentium corporis ducimus accusamus hic nostrum architecto!</p>
+                    <h4>personal</h4>
+                    <p>place name</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-content3">
+        <div class="container-caption">
+            <div class="caption">
+                <i class="bi bi-truck"></i>
+                <h4>Pengiriman Cepat</h4>
+            </div>
+        </div>
+        <div class="container-caption">
+            <div class="caption">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Menjangkau Banyak Tempat</h4>
+            </div>
+        </div>
+        <div class="container-caption">
+            <div class="caption">
+                <i class="bi bi-box"></i>
+                <h4>Banyak Pilihan Pengiriman</h4>
+            </div>
+        </div>
+        <div class="container-caption">
+            <div class="caption">
+                <i class="bi bi-house-fill"></i>
+                <h4>Pengiriman Aman Sampai Tujuan</h4>
+            </div>
+        </div>
+        <div class="container-caption">
+            <div class="caption">
+                <img src="images/Vector.png" alt="">
+                <h4>24 Jam Siap Menerima Keluhan</h4>
+            </div>
+        </div>
+    </div>
+
+    <section class="information">
+        <h1><b>Information</b></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere corporis officiis doloremque
+            laudantium iste cumque, accusamus aliquid, ipsum unde quisquam odio repellat! Architecto impedit rem
+            laudantium quae, veritatis non cum deserunt atque saepe fugiat, magni, soluta rerum dolores ab.</p>
+
+        <div class="container-info">
+            <div class="info-img">
+                <img src="images/courier-attaching-label.png" alt="">
+                <h3>berita</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque a nulla, necessitatibus architecto
+                    excepturi molestiae labore voluptates dolor debitis sed suscipit laudantium illum laboriosam maiores
+                    inventore placeat iusto eum reiciendis.</p><br>
+                <a href="news2.html"><b>more</b></a>
+            </div>
+            <div class="info-img">
+                <img src="images/courier-attaching-label.png" alt="">
+                <h3>berita</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque a nulla, necessitatibus architecto
+                    excepturi molestiae labore voluptates dolor debitis sed suscipit laudantium illum laboriosam maiores
+                    inventore placeat iusto eum reiciendis.</p><br>
+                <a href="news2.html"><b>more</b></a>
+            </div>
+            <div class="info-img">
+                <img src="images/courier-attaching-label.png" alt="">
+                <h3>berita</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque a nulla, necessitatibus architecto
+                    excepturi molestiae labore voluptates dolor debitis sed suscipit laudantium illum laboriosam maiores
+                    inventore placeat iusto eum reiciendis.</p><br>
+                <a href="news2.html"><b>more</b></a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container-footer">
+
+            <div class="logo-footer">
+                <img src="images/swift-express.png" alt="logo">
+            </div>
+            <div class="footer-kanan">
+                <div class="company">
+                    <h4>company</h4>
+                    <p>Services</p>
+                    <p>FAQ</p>
+                </div>
+                <div class="addres">
+                    <h4>address</h4>
+                    <p>info@gmail.com</p>
+                    <p>085825577684</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-footer-bottom">
+        <div class="footer-bottom">
+            <p>2023 wwww.swiftexpress.com</p>
+        </div>
+        <div class="sosmed">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-twitter"></i>
+        </div>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
