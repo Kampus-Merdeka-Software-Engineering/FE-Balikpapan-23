@@ -56,7 +56,7 @@
                 <h2>Track your package</h2>
                 <p>kode pengiriman</p>
                 <input type="text" id="lacak" placeholder="xxx-xxxx-xxx">
-                <button type="submit" class="open-button-lacak">LACAK</button>
+                <button type="submit" onclick="fetchReceiptById()" class="open-button-lacak">LACAK</button>
                 <div class="modal">
                     <dialog class="modal-lacak" id="modal-lacak"> 
                         <h1>Hasil Pencarian</h1>
@@ -362,6 +362,7 @@
 
 
 
+    <script src="./JS/API.js"></script>
     <script src="index.js"></script>
 </body>
 
