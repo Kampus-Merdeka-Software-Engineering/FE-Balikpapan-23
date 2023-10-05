@@ -1123,6 +1123,7 @@ footer {
 .box-service .front-face span {
     background: linear-gradient(-135deg, #860EFF, #1C0C5B);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
