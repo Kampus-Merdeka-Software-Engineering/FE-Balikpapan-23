@@ -61,28 +61,12 @@
                     <dialog class="modal-lacak" id="modal-lacak">
                         <h1>Hasil Pencarian</h1>
                         <div>
-                            <table class="table-lacak">
-                                <thead>
-                                    <tr>
-                                        <th>Receipt Number</th>
-                                        <th>Origin</th>
-                                        <th>Destination</th>
-                                        <th>Sender</th>
-                                        <th>Recipient</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1002351455</td>
-                                        <td>Surabaya</td>
-                                        <td>Jakarta</td>
-                                        <td>Rachel</td>
-                                        <td>Bima Putra</td>
-                                        <td>On Process</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                           <input type="text" class="" placeholder="NO RESI">
+                           <input type="text" class="" placeholder="ASAL">
+                           <input type="text" class="" placeholder="TUJUAN">
+                           <input type="text" class="" placeholder="NAMA PENGIRIM">
+                           <input type="text" class="" placeholder="NAMA PENERIMA">
+                           <input type="text" class="" placeholder="STATUS">
                         </div>
                         <button class="close-button-lacak">Kembali</button>
                     </dialog>
@@ -148,13 +132,10 @@
                         <input type="text" id="berat" placeholder="Kg">
                     </div>
                 </div>
+
+
                 <button onclick="showPopup()" class="button-submit">Cek</button>
-
-
                 <!-- Tambahkan elemen div dengan ID sesuai -->
-
-
-
                 <div class="popup" id="myPopup">
                     <div class="popup-content">
                         <span class="close" onclick="closePopup()">&times;</span>
