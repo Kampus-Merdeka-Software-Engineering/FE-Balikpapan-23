@@ -53,27 +53,19 @@
     <section class="tracking-section">
         <div class="container-tracking">
             <div class="card">
-                <h2>Track your package</h2>
+                <h2>LACAK PAKETMU</h2>
                 <p>kode pengiriman</p>
                 <input type="text" id="lacak" placeholder="xxx-xxxx-xxx">
                 <button type="submit" onclick="fetchReceiptById()" class="open-button-lacak">LACAK</button>
                 <div class="modal">
                     <dialog class="modal-lacak" id="modal-lacak">
-                        <h1>Hasil Pencarian</h1>
-                        <div>
-                           <input type="text" class="" placeholder="NO RESI">
-                           <input type="text" class="" placeholder="ASAL">
-                           <input type="text" class="" placeholder="TUJUAN">
-                           <input type="text" class="" placeholder="NAMA PENGIRIM">
-                           <input type="text" class="" placeholder="NAMA PENERIMA">
-                           <input type="text" class="" placeholder="STATUS">
-                        </div>
-                        <button class="close-button-lacak">Kembali</button>
+                       
                     </dialog>
                 </div>
             </div>
+
             <div class="card">
-                <h2>Check</h2>
+                <h2>CEK ESTIMASI ONGKIRMU</h2>
                 <div class="container-card-input">
                     <div class="card-input">
                         <p>lokasi Awal</p>
@@ -137,17 +129,9 @@
                 <button onclick="showPopup()" class="button-submit">Cek</button>
                 <!-- Tambahkan elemen div dengan ID sesuai -->
                 <div class="popup" id="myPopup">
-                    <div class="popup-content">
-                        <span class="close" onclick="closePopup()">&times;</span>
-                        <h1>CEK</h1>
-
-                        <div id="hasil-pengiriman">
-                            <input type="text" class="" placeholder="ASAL">
-                            <input type="text" class="" placeholder="TUJUAN">
-                            <input type="text" class="" placeholder="BERAT">
-                            <input type="text" class="" placeholder="TOTAL">
-                        </div>
-                    </div>
+                    <dialog class="modal-lacak" id="modal-lacak">
+                       
+                    </dialog>
                 </div>
             </div>
         </div>
