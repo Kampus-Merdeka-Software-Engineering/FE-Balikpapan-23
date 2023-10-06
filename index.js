@@ -6,10 +6,6 @@ hamberger.addEventListener("click", function () {
     menuNav.classList.toggle("active")
 })
 
-
-
-
-
 // check lokasi awal
 const menuOpsi = document.querySelector(".select-menu"),
     selectButton = menuOpsi.querySelector(".select-button"),
@@ -48,7 +44,6 @@ opsiTujuan.forEach(provinsiTujuan => {
 const lokasiAwalElement = document.getElementById("lokasi-awal");
 const lokasiTujuanElement = document.getElementById("lokasi-tujuan");
 const beratElement = document.getElementById("berat");
-const layananElement = document.getElementById("layanan");
 const hargaElement = document.getElementById("harga");
 const submitButton = document.querySelector(".button-submit");
 
@@ -74,17 +69,9 @@ submitButton.addEventListener("click", function () {
     // Menambahkan "kg" di dalam berat saat menampilkan nilai berat
     document.getElementById("berat-hasil").textContent = berat + " kg";
 
-    // Hitung harga berdasarkan lokasi awal, lokasi tujuan, berat, dan layanan yang dipilih
     const hargaPerKg = 5000; // Harga per kilogram
     
-    let layanan;  // Layanan yang dipilih
-    if (lokasiAwal === lokasiTujuan) {
-        layanan = "same day";
-    } else if (berat < 50) {
-        layanan = "layanan reguler";
-    } else {
-        layanan = "layanan kargo";
-    }
+ 
 
     // Hitung total harga berdasarkan berat
     const totalHarga = berat * hargaPerKg;
@@ -93,7 +80,6 @@ submitButton.addEventListener("click", function () {
     lokasiAwalElement.textContent = lokasiAwal;
     lokasiTujuanElement.textContent = lokasiTujuan;
     beratElement.textContent = berat + " kg"; // Menambahkan "kg" di dalam berat
-    layananElement.textContent = layanan;
     hargaElement.textContent = "Rp. " + totalHarga.toLocaleString(); // Mengubah menjadi rupiah
 
     // Tampilkan hasil pengiriman
@@ -109,9 +95,7 @@ function showPopup() {
     // validasi jika user tidak menginput lokasi
     if (lokasiAwal === "Pilih Lokasi Awal" || lokasiTujuan === "Pilih Lokasi Tujuan") {
         return;
-    }
-
-    if (isNaN(berat) || berat <= 0) {
+    }else if (isNaN(berat) || berat <= 0) {
         return;
     }
     var popup = document.getElementById("myPopup");
@@ -138,14 +122,47 @@ closeModal.addEventListener("click", () => {
   modal.close();
 
 });
+// carosel
+const carouselItems = document.querySelectorAll('.content-kanan');
+let currentIndex = 0;
 
-// check lokasi tujuan
-var form = document.getElementById('formResi');
-form.addEventListener('submitButton', function(event) {
+function showSlide(index) {
+    carouselItems.forEach(item => {
+        item.style.transform = `translateX(-${index * 80}%)`;
+    });
+}
 
-  if (submitButton.value === 'masukkan nomer resi') {
-    alert('Masukkan Nomer Resi Terlebih Dahulu!');
-    return;
-  }
-  
-});
+function updateNavButtons() {
+    document.querySelector('.kiri').classList.toggle('hidden', currentIndex === 0);
+    document.querySelector('.kanan').classList.toggle('hidden', currentIndex === carouselItems.length - 1);
+}
+
+function nextSlide() {
+    if (currentIndex < carouselItems.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Kembali ke gambar pertama jika sudah di akhir
+    }
+    showSlide(currentIndex);
+    updateNavButtons();
+}
+
+function prevSlide() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = carouselItems.length - 1; // Pindah ke gambar terakhir jika di awal dan tombol kiri ditekan
+    }
+    showSlide(currentIndex);
+    updateNavButtons();
+}
+
+// Tampilkan slide pertama saat halaman dimuat
+showSlide(currentIndex);
+updateNavButtons();
+
+// Handler untuk tombol kiri
+document.querySelector('.kiri').addEventListener('click', prevSlide);
+
+// Handler untuk tombol kanan
+document.querySelector('.kanan').addEventListener('click', nextSlide);
