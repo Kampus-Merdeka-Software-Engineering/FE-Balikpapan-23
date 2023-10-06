@@ -165,12 +165,13 @@ section>p {
     margin-top: .5rem;
     height: 2rem;
 }
+
 .modal::backdrop {
     background: rgb(0 0 0 / 0.4);
-  }
-  
+}
 
-  .modal-lacak {
+
+.modal-lacak {
     width: 100%;
     min-height: 300px;
     margin: 10rem 2rem;
@@ -181,8 +182,8 @@ section>p {
     justify-content: center;
     align-items: center;
     border: none;
-  }
- 
+}
+
 .close-button-lacak {
     display: grid;
     place-items: center;
@@ -195,30 +196,35 @@ section>p {
     border-radius: 6px;
     cursor: pointer;
 }
-  .table-lacak{
+
+.table-lacak {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 15px;
     min-width: 100%;
     border-radius: 5px 5px 0 0;
     align-items: center;
-  }
-  .table-lacak thead tr{
+}
+
+.table-lacak thead tr {
     color: #fff;
     background: #860EFF;
     text-align: left;
     font-weight: bold;
-  }
-  .table-lacak th,
-  .table-lacak td{
+}
+
+.table-lacak th,
+.table-lacak td {
     padding: 12px 15px;
-  }
-  .table-lacak tbody tr{
+}
+
+.table-lacak tbody tr {
     border-bottom: 1px solid #ddd;
-  }
-  .table-l tbody{
+}
+
+.table-l tbody {
     background: #f3f3f3;
-  }
+}
 
 
 .container-card-input {
@@ -398,11 +404,11 @@ section>p {
 
 table,
 th,
-td{
-    text-align : center;
-    border : 2px solid black;
-    border-collapse : collapse;
-    padding : 1rem;
+td {
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 1rem;
 }
 
 th {
@@ -468,13 +474,39 @@ td {
 
 .container-content-kanan {
     display: flex;
-    align-items: start;
     width: 100%;
+    padding: 0rem 4rem;
     gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.kiri,
+.kanan {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.kiri {
+    left: 0;
+}
+
+.kanan {
+    right: 0;
 }
 
 .content-kanan {
-    width: 60%;
+    min-width: 50%;
 }
 
 .content-kanan img {
@@ -485,8 +517,6 @@ td {
 .content-kanan h4 {
     margin-top: 1rem;
 }
-
-
 
 .container-content3 {
     display: flex;
@@ -621,33 +651,36 @@ footer {
         flex-direction: column;
         font-size: .9rem;
     }
-    .button-text{
+
+    .button-text {
         font-size: 1rem;
     }
-    .button-text-tujuan{
+
+    .button-text-tujuan {
         font-size: 1rem;
     }
-    .select-menu{
+
+    .select-menu {
         width: 100%;
     }
-    .select-menu-tujuan{
+
+    .select-menu-tujuan {
         width: 100%;
     }
-    .misi>h4{
+
+    .misi>h4 {
         font-size: .7rem;
     }
 
-    #hasil-pengiriman{
-        width: 100%;
-        background-color: #860EFF;
-    }
-    .table,tr,th,td{
+
+    .table,
+    tr,
+    th,
+    td {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    
-    
 
     .container-whyus {
         flex-direction: column;
@@ -672,6 +705,9 @@ footer {
         font-size: .7rem;
     }
 
+    .content-left-news {
+        font-size: .9rem;
+    }
     .container-footer {
         display: flex;
     }
@@ -769,26 +805,49 @@ footer {
     .container-content-kanan {
         font-size: .7rem;
     }
-/* about us */
-.visi-misi-page{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.visi-misi{
-    width: 100%;
-}
 
-.container-visi-misi{
-    width: 100%;
-}
-.icon-lamp{
-    display: none;
-}
-.img-cabang-kami>img{
-    width: 100%;
-    background-position: center;
-}
+    /* about us */
+    .visi-misi-page {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .visi-misi {
+        width: 100%;
+    }
+
+    .container-visi-misi {
+        width: 100%;
+        font-size: .8rem;
+    }
+
+    .icon-lamp {
+        display: none;
+    }
+
+    .img-cabang-kami>img {
+        width: 100%;
+        background-position: center;
+    }
+
+    /* about us end */
+
+    /* news */
+
+    .content-right-news {
+        display: none;
+    }
+
+    .content-left-news {
+        font-size: .8rem;
+    }
+
+    .artikel {
+        font-size: .8rem;
+    }
+
+    /* news end */
     footer {
         font-size: .9rem;
     }
@@ -977,14 +1036,6 @@ footer {
 .person-artikel>img {
     border-radius: 50%;
     width: 3rem;
-}
-
-.arrow>button {
-    cursor: pointer;
-    border: none;
-    width: 8rem;
-    font-size: 1.7rem;
-    background-color: var(--main);
 }
 
 /* artikel end */
@@ -1263,7 +1314,7 @@ footer {
 /* about us end */
 
 /* contact */
-.container-contact{
+.container-contact {
     background-image: url('/images/IMG2.jpg');
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
@@ -1277,7 +1328,7 @@ footer {
     background: #f8f2f2;
     height: 100%;
     padding: 2rem;
-    box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.028), 0 0px 5.3px rgba(0, 0, 0, 0.04) 
+    box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.028), 0 0px 5.3px rgba(0, 0, 0, 0.04)
 }
 
 .wrapper>h2 {
@@ -1328,7 +1379,7 @@ button {
     padding: 1rem 1.5rem;
     border: none;
     cursor: pointer;
-    transition:0.15s;
+    transition: 0.15s;
 }
 
 .submit:hover {
