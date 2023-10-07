@@ -137,13 +137,14 @@ section>p {
 
 
 /* tracking */
-.container-tracking {
+.container-status-resi {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.card {
+.card-status,
+.card-tarif {
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -166,12 +167,16 @@ section>p {
     height: 2rem;
 }
 
-.modal::backdrop {
+.popup-lacak::backdrop {
     background: rgb(0 0 0 / 0.4);
 }
 
+.popup-ongkir::backdrop {
+    background: rgb(0 0 0 / 0.4);
+}
 
-.modal-lacak {
+.modal-lacak,
+.modal-ongkir {
     width: 100%;
     min-height: 300px;
     margin: 10rem 2rem;
@@ -184,7 +189,8 @@ section>p {
     border: none;
 }
 
-.close-button-lacak {
+.close-button-lacak,
+.close-button-ongkir {
     display: grid;
     place-items: center;
     font-size: 18px;
@@ -197,7 +203,26 @@ section>p {
     cursor: pointer;
 }
 
-.table-lacak {
+.wrapper-input-ongkir {
+    display: flex;
+    width: 100%;
+    gap: 2.5rem;
+    font-size: .8rem;
+}
+
+.opsi-asal {
+    width: 100%;
+}
+
+.opsi-tujuan {
+    width: 100%;
+}
+
+.input-berat {
+    width: 20%;
+}
+
+/* .table-lacak {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 15px;
@@ -224,17 +249,9 @@ section>p {
 
 .table-l tbody {
     background: #f3f3f3;
-}
+} */
 
-
-.container-card-input {
-    display: flex;
-    width: 100%;
-    gap: 1rem;
-    font-size: .8rem;
-}
-
-.select-menu {
+/* .select-menu {
     width: 10rem;
 }
 
@@ -318,12 +335,12 @@ section>p {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-}
+} */
 
 
 
 /* tujuan */
-.select-menu-tujuan {
+/* .select-menu-tujuan {
     width: 10rem;
 }
 
@@ -374,12 +391,13 @@ section>p {
     display: block;
 }
 
-.card>p,
+.card-status>p,
+.card-tarif>p,
 .card-input>p,
 .card-input>h1 {
     margin-top: .5rem;
     color: var(--main2);
-}
+} */
 
 
 
@@ -392,7 +410,7 @@ section>p {
 
 
 
-.button-submit {
+.open-button-ongkir {
     margin-top: .5rem;
     padding: .5rem;
     background-color: var(--main);
@@ -633,16 +651,17 @@ footer {
         width: 70%;
     }
 
-    .container-tracking {
+    .container-status-resi {
         flex-direction: column;
         gap: 2rem;
     }
 
-    .card {
+    .card-status,
+    .card-tarif {
         width: 100%;
     }
 
-    .container-card-input {
+    .wrapper-input-ongkir {
         display: flex;
         flex-direction: column;
     }
@@ -772,12 +791,13 @@ footer {
 
     }
 
-    .container-tracking {
+    .container-status-resi {
         flex-direction: column;
         gap: 2rem;
     }
 
-    .card {
+    .card-status,
+    .card-tarif {
         width: 100%;
     }
 

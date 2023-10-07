@@ -50,87 +50,54 @@
         </div>
     </div>
 
-    <section class="tracking-section">
-        <div class="container-tracking">
-            <div class="card">
+    <section class="status dan tarif">
+        <div class="container-status-resi">
+            <div class="card-status">
                 <h2>LACAK PAKETMU</h2>
-                <p>kode pengiriman</p>
+                <p>Masukkan no resi:</p>
                 <input type="text" id="lacak" placeholder="xxx-xxxx-xxx">
                 <button type="submit" onclick="fetchReceiptById()" class="open-button-lacak">LACAK</button>
-                <div class="modal">
-                    <dialog class="modal-lacak" id="modal-lacak">
-                       
+                
+                <!-- the output popup -->
+                <div class="popup-lacak">
+                    <dialog class="modal-lacak" id="modal-lacak">  
                     </dialog>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card-tarif">
                 <h2>CEK ESTIMASI ONGKIRMU</h2>
-                <div class="container-card-input">
-                    <div class="card-input">
-                        <p>lokasi Awal</p>
+                <div class="wrapper-input-ongkir">
+                    <form method="get">
+                        <label for="opsi-asal">Asal:</label>
+                        <select class="opsi-asal" id="opsi-asal" name="opsi-asal">
+                          <option value="makassar">Makassar</option>
+                          <option value="surabaya">Surabaya</option>
+                          <option value="bandung">Bandung</option>
+                          <option value="jakarta">Jakarta</option>
+                        </select>
+                    </form>
 
-                        <div class="select-menu">
-                            <div class="select-button">
-                                <span class="button-text">Pilih Lokasi Awal</span>
-                                <i class="bi bi-chevron-compact-down"></i>
-                            </div>
+                    <form method="get">
+                        <label for="opsi-tujuan">Tujuan:</label>
+                        <select class="opsi-tujuan" id="opsi-tujuan" name="opsi-tujuan">
+                          <option value="makassar">Makassar</option>
+                          <option value="surabaya">Surabaya</option>
+                          <option value="bandung">Bandung</option>
+                          <option value="jakarta">Jakarta</option>
+                        </select>
+                    </form>
 
-                            <ul class="opsi">
-                                <li class="provinsi">
-                                    <span class="text-provinsi">Makassar</span>
-                                </li>
-                                <li class="provinsi">
-                                    <span class="text-provinsi">Surabaya</span>
-                                </li>
-                                <li class="provinsi">
-                                    <span class="text-provinsi">Bandung</span>
-                                </li>
-                                <li class="provinsi">
-                                    <span class="text-provinsi">Jakarta</span>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-
-                    <div class="card-input">
-                        <p>Tujuan</p>
-                        <div class="select-menu-tujuan">
-                            <div class="select-button-tujuan">
-                                <span class="button-text-tujuan">Pilih Lokasi Awal</span>
-                                <i class="bi bi-chevron-compact-down"></i>
-                            </div>
-
-                            <ul class="opsi-tujuan">
-                                <li class="provinsi-tujuan">
-                                    <span class="text-provinsi-tujuan">Makassar</span>
-                                </li>
-                                <li class="provinsi-tujuan">
-                                    <span class="text-provinsi-tujuan">Surabaya</span>
-                                </li>
-                                <li class="provinsi-tujuan">
-                                    <span class="text-provinsi-tujuan">Bandung</span>
-                                </li>
-                                <li class="provinsi-tujuan">
-                                    <span class="text-provinsi-tujuan">Jakarta</span>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="card-input">
-                        <p>Berat (KG)</p>
-                        <input type="text" id="berat" placeholder="Kg">
+                    <div class="input-berat">
+                        <label for="">Berat (Kg):</label>
+                        <input type="text" id="berat-paket" placeholder="Kg">
                     </div>
                 </div>
-
-
-                <button onclick="showPopup()" class="button-submit">Cek</button>
-                <!-- Tambahkan elemen div dengan ID sesuai -->
-                <div class="popup" id="myPopup">
-                    <dialog class="modal-lacak" id="modal-lacak">
-                       
+                <button type="submit" onclick="fetchOngkir()" class="open-button-ongkir">CEK</button>
+                
+                <!-- the output popup -->
+                <div class="popup-ongkir">
+                    <dialog class="modal-ongkir" id="modal-ongkir">  
                     </dialog>
                 </div>
             </div>
