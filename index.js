@@ -37,10 +37,10 @@ function closeOngkir() {
 };
 
 
-// CONTACT US
-function createMessage() {
-    alert("Pesan Anda sudah terkirim.");
-}
+// // CONTACT US
+// function createMessage() {
+//     alert("Pesan Anda sudah terkirim.");
+// }
 
 // carosel
 const carouselItems = document.querySelectorAll('.content-kanan');
