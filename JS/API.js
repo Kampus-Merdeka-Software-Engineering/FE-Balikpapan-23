@@ -69,25 +69,25 @@ const fetchOngkir = async () => {
 }
 
 
-// const createMessage = async () => {
-//     const full_name = document.getElementById('contactUs-name').value;
-//     const email = document.getElementById('contactUs-email').value;
-//     const subject = document.getElementById('contactUs-subject').value;
-//     const message = document.getElementById('contactUs-theMessage').value;
+const createMessage = async () => {
+    const full_name = document.getElementById('contactUs-name').value;
+    const email = document.getElementById('contactUs-email').value;
+    const subject = document.getElementById('contactUs-subject').value;
+    const message = document.getElementById('contactUs-theMessage').value;
 
-//     try {
-//         const response = await fetch(`${API_BASE_URL}/message`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({full_name, email, subject, message})
-//         });
-//         const data = await response.json();
-//         // response.json().then(data => {
-//         //     console.log(JSON.stringify(data));
-//         //   });
-//     } catch (error) {
-//         console.error('Error sending message:', error);
-//     } 
-// }
+    try {
+        const response = await fetch(`${API_BASE_URL}/message`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({full_name, email, subject, message})
+        });
+        const data = await response.json();
+        // response.json().then(data => {
+        //     console.log(JSON.stringify(data));
+        //   });
+    } catch (error) {
+        console.error('Error sending message:', error);
+    } 
+}
