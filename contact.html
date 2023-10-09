@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <title>Contact Us</title>
+    <title>Swift Express</title>
 </head>
 
 <body>
@@ -51,23 +51,20 @@
                 <div class="form-group">
                     <label for="contactUs-name">Full Name</label>
                     <input type="text" id="contactUs-name">
-                </div>
-                <div class="form-group">
+
                     <label for="contactUs-email">Email Address</label>
                     <input type="email" id="contactUs-email">
-                </div>
-                <div class="form-group">
+
                     <label for="contactUs-subject">Subject</label>
                     <input type="text" id="contactUs-subject">
-                </div>
-                <div class="form-group">
+
                     <label for="contactUs-theMessage">Message</label>
                     <textarea id="contactUs-theMessage" rows="5" placeholder="Type your message here..."></textarea>
                 </div>
 
-                <div class="form-group">
-                    <button type="button" class="submit" onclick="createMessage()">Send Message</button>
-                </div>
+                <button type="button" class="submit" id="submit-contact" onclick="createMessage()">Send Message</button>
+                
+            
             </form>
         </div>
     </div>
