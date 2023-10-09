@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000'
+const API_BASE_URL = 'https://wicked-jeans-dog.cyclic.app'
 
 // C E K   R E S I
 const fetchReceiptById = async () => {
