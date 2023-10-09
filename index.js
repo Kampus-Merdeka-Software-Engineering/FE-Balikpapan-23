@@ -36,12 +36,6 @@ function closeOngkir() {
     popupOngkir.style.display = "none";
 };
 
-
-// // CONTACT US
-// function createMessage() {
-//     alert("Pesan Anda sudah terkirim.");
-// }
-
 // carosel
 const carouselItems = document.querySelectorAll('.content-kanan');
 let currentIndex = 0;

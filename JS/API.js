@@ -84,9 +84,7 @@ const createMessage = async () => {
             body: JSON.stringify({full_name, email, subject, message})
         });
         const data = await response.json();
-        // response.json().then(data => {
-        //     console.log(JSON.stringify(data));
-        //   });
+
     } catch (error) {
         console.error('Error sending message:', error);
     } 
