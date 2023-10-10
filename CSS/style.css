@@ -177,9 +177,9 @@ section>p {
 
 .modal-lacak,
 .modal-ongkir {
-    width: 100%;
+    width: 30%;
     min-height: 300px;
-    margin: 10rem 2rem;
+    margin: 8rem 32rem;
     padding: 2rem;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -222,193 +222,12 @@ section>p {
     width: 20%;
 }
 
-/* .table-lacak {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 15px;
-    min-width: 100%;
-    border-radius: 5px 5px 0 0;
-    align-items: center;
-}
-
-.table-lacak thead tr {
-    color: #fff;
-    background: #860EFF;
-    text-align: left;
-    font-weight: bold;
-}
-
-.table-lacak th,
-.table-lacak td {
-    padding: 12px 15px;
-}
-
-.table-lacak tbody tr {
-    border-bottom: 1px solid #ddd;
-}
-
-.table-l tbody {
-    background: #f3f3f3;
-} */
-
-/* .select-menu {
-    width: 10rem;
-}
-
-.select-menu .select-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 1rem;
-    background-color: transparent;
-    padding: 1rem;
-    font-size: .7rem;
-    font-weight: 500;
-    border-radius: .5rem;
-    text-align: center;
-    cursor: pointer;
-    border: .1rem solid black;
-    margin-top: .2rem;
-}
-
-.select-button i {
-    font-size: 1rem;
-    margin-left: .3rem;
-    margin-top: .3rem;
-}
-
-
-.opsi {
-    position: relative;
-    padding: 1rem;
-    border-radius: .5rem;
-    border: .1rem solid black;
-    display: none;
-}
-
-.provinsi {
-    height: 30px;
-    display: flex;
-    align-items: center;
-    padding: 0 .5rem;
-    cursor: pointer;
-}
-
-.provinsi:hover {
-    background-color: var(--bg);
-}
-
-.select-menu.active .opsi {
-    display: block;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.popup-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    text-align: center;
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-} */
-
-
-
-/* tujuan */
-/* .select-menu-tujuan {
-    width: 10rem;
-}
-
-.select-menu-tujuan .select-button-tujuan {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 1rem;
-    background-color: transparent;
-    padding: 1rem;
-    font-size: .7rem;
-    font-weight: 500;
-    border-radius: .5rem;
-    text-align: center;
-    cursor: pointer;
-    border: .1rem solid black;
-    margin-top: .2rem;
-}
-
-.select-button-tujuan i {
-    font-size: 1rem;
-    margin-left: .3rem;
-    margin-top: .3rem;
-}
-
-
-.opsi-tujuan {
-    position: relative;
-    padding: 1rem;
-    border-radius: .5rem;
-    border: .1rem solid black;
-    display: none;
-}
-
-.provinsi-tujuan {
-    height: 30px;
-    display: flex;
-    align-items: center;
-    padding: 0 .5rem;
-    cursor: pointer;
-}
-
-.provinsi-tujuan:hover {
-    background-color: var(--bg);
-}
-
-.select-menu-tujuan.active .opsi-tujuan {
-    display: block;
-}
-
-.card-status>p,
-.card-tarif>p,
-.card-input>p,
-.card-input>h1 {
-    margin-top: .5rem;
-    color: var(--main2);
-} */
-
-
-
 #berat {
     text-align: center;
     margin-top: .2rem;
     height: 2rem;
     border-radius: .5rem;
 }
-
-
 
 .open-button-ongkir {
     margin-top: .5rem;
@@ -842,6 +661,10 @@ footer {
         font-size: .8rem;
     }
 
+    .container-visi-misi .misi{
+        padding: 5px;
+    }
+
     .icon-lamp {
         display: none;
     }
@@ -1121,19 +944,19 @@ footer {
 /* services */
 .services-title {
     max-height: 100vh;
-    padding: 30px;
+    padding: 40px;
 }
 
 .services-title>h1 {
     text-align: center;
     font-size: 3rem;
     color: var(--main2);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .services-title>p {
     text-align: center;
-    margin: 50px;
+    margin: 10px;
 }
 
 .main {
@@ -1145,7 +968,7 @@ footer {
 
 .container-services {
     display: grid;
-    margin: 100px 90px auto;
+    margin: 30px 90px 90px 90px;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
