@@ -46,19 +46,21 @@ const fetchOngkir = async () => {
     try {
         const response = await fetch(`${API_BASE_URL}/price?origin=${asal}&destination=${tujuan}&weight=${berat}`);
         const tarif = await response.json();
+
         const detailOngkir = document.getElementById('modal-ongkir');
         
         detailOngkir.innerHTML = `
         <h1>CEK</h1>
         <div>
-            <label for="origin">Asal:</label>
-            <input type="text" id="origin" placeholder="ASAL" value="${tarif.origin}">
+        <label for="origin">Asal:</label>
+        <input type="text" id="origin" placeholder="ASAL" value="${tarif.origin}">
 
-            <label for="destination">Tujuan:</label>
-            <input type="text" id="destination" placeholder="TUJUAN" value="${tarif.destination}">
+        <label for="destination">Tujuan:</label>
+        <input type="text" id="destination" placeholder="TUJUAN" value="${tarif.destination}">
 
-            <label for="price">Estimasi ongkir:</label>
-            <input type="text" id="price" placeholder="HARGA" value="${tarif.price}">
+        <label for="price">Estimasi ongkir:</label>
+        <input type="text" id="price" placeholder="HARGA" value="${tarif.price}">
+
         </div>
         <button onclick="closeOngkir()" class="close-button-ongkir">Kembali</button>
         `
