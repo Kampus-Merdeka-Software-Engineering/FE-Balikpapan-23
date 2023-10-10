@@ -661,6 +661,10 @@ footer {
         font-size: .8rem;
     }
 
+    .container-visi-misi .misi{
+        padding: 5px;
+    }
+
     .icon-lamp {
         display: none;
     }
